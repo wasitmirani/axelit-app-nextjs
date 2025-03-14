@@ -3,6 +3,7 @@ import { ReactNode, useEffect, useState } from 'react';
 import MasterLayout from './layouts/backend/MasterLayout';
 import AuthMasterLayout from './layouts/auth/AuthMasterLayout';
 
+
 function checkAuth() {
   // Replace this with your actual authentication check logic
   return localStorage.getItem('authToken') !== null;
@@ -18,13 +19,13 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       {isAuthenticated ? (
-        <MasterLayout>
-          {children}
-        </MasterLayout>
+      <MasterLayout>
+        {children}
+      </MasterLayout>
       ) : (
-        <AuthMasterLayout>
-          {children}
-        </AuthMasterLayout>
+      <AuthMasterLayout>
+        {children}
+      </AuthMasterLayout>
       )}
     </>
   );

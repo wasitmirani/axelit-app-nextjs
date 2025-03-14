@@ -1,11 +1,23 @@
 // app/secondary/layout.tsx
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import LayoutSwitcher from "./partials/Switcher";
 import HeaderMenu from "./partials/Header";
 import SideBarMenu from "./partials/SideBarMenu";
+// import { useAuth } from 'app/contexts/AuthContext';
+import { useRouter } from 'next/router';
 
 export default function MasterLayout({ children }: { children: ReactNode }) {
+    const router = useRouter();
+    // const { user } = useAuth();
+    // console.log("user",user);
 
+    // useEffect(() => {
+    //   if (!user) {
+    //     router.push("/auth/login");
+    //   }
+    // }, [user, router]);
+  
+    // if (!user) return null; // Prevent flicker during redirect
     return (
         <html lang="en">
 <meta httpEquiv="content-type" content="text/html;charset=UTF-8" />
