@@ -12,7 +12,6 @@ const SideBar: React.FC = () => {
                 <a className="logo d-inline-block" href="#">
                     <img alt="#" src="/assets/images/logo/1.png" />
                 </a>
-
                 <span className="bg-light-primary toggle-semi-nav">
                     <i className="ti ti-chevrons-right f-s-20"></i>
                 </span>
@@ -57,9 +56,6 @@ const SideBar: React.FC = () => {
                                             </li>
                                         ))}
                                     </ul>
-
-
-
                                 </li>
                             )
                         ))}

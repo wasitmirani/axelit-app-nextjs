@@ -5,39 +5,12 @@ import HeaderMenu from "./partials/Header";
 import SideBarMenu from "./partials/SideBarMenu";
 
 export default function MasterLayout({ children }: { children: ReactNode }) {
-    // {children}
+
     return (
-
-        // <html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-menu-styles="light" data-toggled="close">
-
-        //     <meta httpEquiv="content-type" content="text/html;charset=UTF-8" />
-        //     <head>
-        //         <meta charSet="UTF-8" />
-        //         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        //         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        //         <meta name="Description" content="Codeigniter Bootstrap Responsive Admin Web Dashboard Template" />
-        //         <meta name="Author" content="Spruko Technologies Private Limited" />
-        //         <meta name="keywords" content="custom dashboard nextjs" />
-        //         <title> custom - PHP Bootstrap 5 Premium Admin & Dashboard Template </title>
-        //         {/* <link rel="icon" href="/assets/images/brand-logos/favicon.ico" type="image/x-icon" /> */}
-        //         <script src="/assets/js/main.js"></script>
-        //         <link id="style" href="/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-        //         <link href="/assets/css/styles.css" rel="stylesheet" />
-        //         <link href="/assets/css/icons.css" rel="stylesheet" />
-        //         <link href="/assets/libs/node-waves/waves.min.css" rel="stylesheet" />
-        //         <link href="/assets/libs/simplebar/simplebar.min.css" rel="stylesheet" />
-        //         <link rel="stylesheet" href="/assets/libs/flatpickr/flatpickr.min.css" />
-        //         <link rel="stylesheet" href="/assets/libs/%40simonwep/pickr/themes/nano.min.css" />
-        //         <link rel="stylesheet" href="/assets/libs/flatpickr/flatpickr.min.css" />
-        //         <link rel="stylesheet" href="/assets/libs/%40tarekraafat/autocomplete.js/css/autoComplete.css" />
-        //     </head>
         <html lang="en">
-
-
 <meta httpEquiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-  
+
 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 <meta charSet="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -46,7 +19,8 @@ export default function MasterLayout({ children }: { children: ReactNode }) {
     <meta content="la-themes" name="author" />
     <link href="/assets/images/logo/favicon.png" rel="icon" type="image/x-icon" />
     <link href="/assets/images/logo/favicon.png" rel="shortcut icon" type="image/x-icon" />
-    <title>axelit - Premium Admin Template</title>
+    <title>{children ? `axelit - ${String(children)}` : 'axelit - Premium Admin'}</title>
+   
     {/*font-awesome-css */}
 
     <link href="/assets/vendor/fontawesome/css/all.css" rel="stylesheet" />
