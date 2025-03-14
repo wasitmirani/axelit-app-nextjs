@@ -37,8 +37,9 @@ export default class SidebarMenu {
     }
     getMenuList(): any[] {
         return [
+      
             this.setHeadingMenu('Analytics'),
-            this.setMultiMenu('Dashboards', 'ri-home-smile-line', 'dashboard-view',
+            this.setMultiMenu('Dashboards', 'iconoir-home-simple-door', 'dashboard-view',
                 [
                     this.setSubMenu('Dashboard', '/dashboard', 'dashboard-view'),
                     // Add more sub-menu items as needed
